@@ -1,0 +1,6 @@
+{
+  "material-icon-theme.activeIconPack": "nest",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  }
+}
