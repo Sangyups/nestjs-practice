@@ -6,8 +6,8 @@ import {
   Param,
   Post,
 } from '@nestjs/common';
-import { CreateMessageDto } from './dtos/create-message.dto';
-import { MessagesService } from './messages.service';
+import { CreateMessageDto } from '@src/messages/dtos/create-message.dto';
+import { MessagesService } from '@src/messages/messages.service';
 
 @Controller('messages')
 export class MessagesController {
