@@ -1,9 +1,9 @@
 import { ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
-import { MessagesModule } from '@src/messages/messages.module';
+import { ComputerModule } from '@src/computer/computer.module';
 
 async function bootstrap() {
-  const app = await NestFactory.create(MessagesModule);
+  const app = await NestFactory.create(ComputerModule);
   app.useGlobalPipes(new ValidationPipe());
   await app.listen(4000);
 }
