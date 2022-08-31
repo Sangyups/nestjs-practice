@@ -1,6 +1,5 @@
 import {
   Body,
-  ClassSerializerInterceptor,
   Controller,
   Delete,
   Get,
@@ -13,12 +12,13 @@ import {
   Query,
   UseInterceptors,
 } from '@nestjs/common';
+import { SerializeInterceptor } from 'src/inteceptors/serialize.interceptor';
 import { CreateUserRequestDto } from 'src/users/dtos/create-user.dto';
 import { UpdateUserRequestDto } from 'src/users/dtos/update-user.dto';
 import { UsersService } from 'src/users/users.service';
 
 @Controller('auth')
-@UseInterceptors(ClassSerializerInterceptor)
+@UseInterceptors(SerializeInterceptor)
 export class UsersController {
   constructor(private readonly userService: UsersService) {}
 
